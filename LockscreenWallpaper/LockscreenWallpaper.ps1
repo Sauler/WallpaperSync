@@ -17,7 +17,7 @@ function Get-LockscreenWallpaper () {
         $LockscreenWallpaperPath = $SpotlightWallaperPath;
     } elseif ($LockscreenWallpaperType -eq 0) {
         $null = [Windows.System.UserProfile.LockScreen,Windows.System.UserProfile,ContentType=WindowsRuntime];
-        $LockscreenWallpaperPath = [Windows.System.UserProfile.LockScreen]::OriginalImageFile.AbsolutePath;
+        $LockscreenWallpaperPath = [Windows.System.UserProfile.LockScreen]::OriginalImageFile.LocalPath;
     }
     
     return $LockscreenWallpaperPath;
