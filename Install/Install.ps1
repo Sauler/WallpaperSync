@@ -7,8 +7,10 @@ function Add-ScriptToStartup () {
     $Shortcut.TargetPath = "$PSScriptRoot\..\Launcher\Launcher.vbs";
     $Shortcut.WorkingDirectory = "$PSScriptRoot\..\Launcher";
     $Shortcut.Save();
-    Write-Host "Script was added to autostart";
-    Read-Host; 
+    Write-Host "Script was successfully installed!";
+    # Run script after install
+    Start-Process "$PSScriptRoot\..\Launcher\Launcher.vbs" -WorkingDirectory "$PSScriptRoot\..\Launcher"; 
+    Read-Host;
 }
 
 switch ($Autostart) {
