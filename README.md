@@ -1,18 +1,17 @@
 # WallpaperSync
 
-Script that will run in background and sync wallpaper bettwen Desktop and Lockscreen
+Script that will run in background and sync wallpaper bettwen Lockscreen and Desktop
 
-## Getting Started
-
-TODO
-
-### Prerequisites
+## Prerequisites
 
 Windows 10
 
 ### Installing
 
-TODO
+1. Download script.
+2. Unzip in location where you want to install this script.
+3. Go to **Install** folder and run ***Install.bat*** file.
+4. Script will be added to autostart and running in background.
 
 ## Authors
 
