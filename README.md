@@ -2,11 +2,17 @@
 
 Script that will run in background and sync wallpaper bettwen Lockscreen and Desktop
 
+## Features
+* Auto install script
+* Simplified code
+* Windows 10 Fall Creators Update Support
+* Admin rigths not needed
+
 ## Prerequisites
 
 Windows 10
 
-### Installing
+## Installing
 
 1. Download script.
 2. Unzip in location where you want to install this script.

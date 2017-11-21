@@ -31,12 +31,12 @@ $userSID = ([System.DirectoryServices.AccountManagement.UserPrincipal]::Current)
 
 # Register lockscreen wallaper change listener
 $EventQuery = "SELECT * FROM RegistryTreeChangeEvent WHERE Hive='HKEY_LOCAL_MACHINE' AND RootPath='SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Authentication\\LogonUI\\Creative'";
-Register-WmiEvent -Query $EventQuery -SourceIdentifier LockscreenWallaperListener -Action { OnLockscreenWallpaperChange };
+Register-WmiEvent -Query $EventQuery -SourceIdentifier LockscreenWallpaperListener -Action { OnLockscreenWallpaperChange };
 
 $EventQuery = "SELECT * FROM RegistryTreeChangeEvent  WHERE Hive='HKEY_LOCAL_MACHINE' AND RootPath='SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SystemProtectedUserData\\$userSID\\AnyoneRead\\LockScreen'";
 Register-WmiEvent -Query $EventQuery -SourceIdentifier LockScreenWallpaperListener1 -Action { OnLockscreenWallpaperChange }  
 
 # Wait for lockscreen wallpaper change
 while ($true) {
-   Wait-Event -SourceIdentifier "LockscreenWallaperListener";
+   Wait-Event -SourceIdentifier "LockscreenWallpaperListener";
 }
